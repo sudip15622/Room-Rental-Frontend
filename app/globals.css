@@ -1,21 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=EB+Garamond:ital@0;1&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 @import "tailwindcss";
 
 :root {
   --bg-color: rgb(26, 27, 29);
-  --text-color: rgb(252 252 254);
+  --bg-sec-color: rgb(36, 37, 40);
+  --text-color: rgb(242, 242, 245);
   --text-sec-color: #a4a5a6;
   --hover-color: #6078c9;
   --button-color: rgb(98 132 255);
 }
 
+/* For WebKit browsers (Chrome, Safari, newer Edge) */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Standard property (Firefox, IE, Edge) */
+html {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--bg-color);
   color: var(--text-color);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  /* font-family: Arial, Helvetica, sans-serif; */
 }
 
 main {
-  width: full;
-  margin: 120px auto;
-  max-width: 1280px;
+  width: 100%;
+  margin: 120px 28px 250px 28px;
+  padding: 0 28px;
+  max-width: 1336px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 250px;
 }

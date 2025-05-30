@@ -26,7 +26,7 @@ const Navbar = () => {
     },
   ];
   return (
-    <header className="w-full flex items-center justify-center sticky top-0 left-0">
+    <header className="z-[1000] bg-[var(--bg-color)] w-full flex items-center justify-center sticky top-0 left-0">
       <nav className="w-full mx-7 max-w-7xl py-5 flex flex-row items-center justify-between">
         <Link href={"/"} className="flex flex-row gap-x-2 items-baseline-last">
           <div className="flex flex-col gap-y-1">
@@ -53,7 +53,7 @@ const Navbar = () => {
               <li key={index}>
                 <Link
                   href={page.link}
-                  className={`font-semibold ${page.name === "Login" ? "text-[var(--hover-color)]" : "text-[#d9dbdc]"} hover:text-[var(--button-color)] transition-colors duration-200 `}
+                  className={`font-semibold ${page.name === "Login" && "text-[var(--hover-color)]"} hover:text-[var(--button-color)] transition-colors duration-200 `}
                 >
                   {page.name}
                 </Link>
